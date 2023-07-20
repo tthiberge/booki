@@ -46,6 +46,46 @@ p {
 }
 
 
+/* HEADER */
+
+header {
+  display: flex;
+justify-content: space-between;
+align-items: center;
+align-self: stretch;
+}
+
+.logo {
+  display: flex;
+  padding: 30px 50px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+
+}
+
+.logo img {
+  width: 61.09px;
+height: 19px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 68px;
+  padding-right: 35px;
+}
+
+.header-nav-item {
+  padding-block: 20px;
+}
+
+
+
+
+
+
+
+
 .main-containeur {
   display: flex;
   padding: 0px 50px;
@@ -83,6 +123,13 @@ main {
 
 
 
+
+
+
+
+
+
+
 .filterbar {
   display: flex;
   height: 50px;
@@ -101,11 +148,12 @@ main {
 .filter-item {
   display: flex;
   height: 50px;
-  padding: 4px 19px;
+  /* Au lieu de padding 4 je mets 0 car c'est un peu trop épais mais je ne comprends pas pourquoi */
+  padding: 0px 19px;
   align-items: center;
   gap: 10px;
-
-  border-radius: 25px;
+  /* Je mets border-radius 50px pour que ce soit plus arrondi au lieu de 35px du figma */
+  border-radius: 50px;
   border: 2px solid var(--grey-tint-2, #D9D9D9);
 }
 
@@ -113,12 +161,23 @@ main {
   color: #0065FC;
 }
 
+.infobar {
+  display: flex;
+  height: 24px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
 
-.infobar i {
+
+.infobar-icon {
+  display: flex;
   width: 24px;
   height: 24px;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
-  border: solid 1px #D9D9D9;
+  border: solid 1px #F2F2F2;
 }
 
 
@@ -146,10 +205,16 @@ main {
 
 
 .hebergements-cards-row {
-  display: grid;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%
+  /* align-self: stretch; */
+  /* display: grid;
   grid-template-columns: 1fr 1fr 1fr ;
   gap: 30px;
-  align-self: stretch;
+  align-self: stretch; */
 }
 
 .hebergements-card {
@@ -158,7 +223,7 @@ main {
   padding-bottom: 15px;
   align-items: center;
   gap: 4px;
-  flex: 1 0 0;
+  flex-grow: 1;
   border-radius: 20px;
   background: #FFF;
   box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
@@ -250,9 +315,9 @@ main {
 .populaires-card-img {
   height: 100%;
   width: 123px;
-  background: url('../images/hebergements/fred-kleber.jpg'), lightgray 50% / cover no-repeat;
-  background-size: cover;
-  background-position: center;
+  /* background: url('../images/hebergements/fred-kleber.jpg'), lightgray 50% / cover no-repeat; */
+  /* background-size: cover;
+  background-position: center; */
 }
 
 .populaires-card-data {
@@ -298,7 +363,7 @@ main {
   gap: 30px;
 }
 
-.activites-link-card{
+.link-card{
   width: 100%;
 }
 
@@ -320,9 +385,9 @@ main {
   width: 100%;
   height: 380px;
   /* align-self: stretch; */
-  background: url('../images/activites/florian-wehde.jpg'), lightgray 50% / cover no-repeat;
+  /* background: url('../images/activites/florian-wehde.jpg'), lightgray 50% / cover no-repeat;
   background-size: cover;
-  background-position: top;
+  background-position: top; */
 }
 
 .activites-card-data {
