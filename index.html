@@ -11,94 +11,417 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
     <link rel="stylesheet" href="./css/style.css">
     <!-- <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/style.css"> -->
 </head>
 
 <body>
-    <div class="main-container">
-      <header>
+    <header>
         <div class="logo">
-          Logo
+            Logo
         </div>
         <nav class="header-nav">
-          <div class="header-nav-item">
-            Hebergement
-          </div>
-          <div class="header-nav-item">
-            Activités
-          </div>
+            <a href="#">
+                <div class="header-nav-item">
+                    Hebergement
+                </div>
+            </a>
+            <a href="#">
+                <div class="header-nav-item">
+                    Activités
+                </div>
+            </a>
         </nav>
-      </header>
+    </header>
 
+    <div class="main-containeur">
       <main>
-        <section class="hebergements-general">
-          <div class="section-title">
-            Hebergements à Marseille
-          </div>
-          <div class="hebergements-cards">
-            <article class="hebergements-card">
-              <img src="" alt="">
-              <h2 class="card-title">
+        <section class="search">
+            <div class="header">
+                <div>
+                    <h1 class="section-title">
+                        Trouver votre hébergement pour des vacances de rêve
+                    </h1>
+                </div>
+                <div>
+                    <p class="section-subtitle">
+                        En plein centre-ville ou en pleine nature
+                    </p>
+                </div>
+            </div>
+            <form class="searchbar">
+                <!-- Le champ de recherche est un champ de saisie, le texte doit donc pouvoir être
+    édité par l’utilisateur.
+    ● Il faut englober ce champ dans un formulaire. La partie Recherche ne doit pas
+    être fonctionnelle - il s’agit d’une première version pour valider l’interface.
+     A VOIR COMMENT JE VEUX LE TRAITER / PAS FORCEMENT AVEC DES DIV DEDANS, REPRENDRE FORMULAIRE-->
+                <div class="search-pin">
 
-              </h2>
-              <p class="card-text">
+                </div>
+                <div class="searfield">
 
-              </p>
-              <div class="card-stars">
+                </div>
+                <div class="searchbou">
 
-              </div>
-            </article>
-            <!-- Je dupliquerai *6 seulement quand la carte sera parfaite -->
-          </div>
+                </div>
+            </form>
+            <div class="filterbar">
+                <!-- <div class="filter-items"> -->
+                    <h2 class="medium-title">
+                        Filtres
+                    </h2>
+                    <div class="filter-item">
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                        <h3> Economique</h3>
+                    </div>
+                    <div class="filter-item">
+                        <i class="fa-solid fa-person"></i>
+                        <h3> Familial</h3>
+                    </div>
+                    <div class="filter-item">
+                        <i class="fa-solid fa-heart"></i>
+                        <h3> Romantique</h3>
+                    </div>
+                    <div class="filter-item">
+                        <i class="fa-solid fa-fire"></i>
+                        <h3> Nos pépites</h3>
+                    </div>
+                <!-- </div> -->
+            </div>
+            <div class="infobar" style="display: flex">
+                <!-- mettre du fontawesome en fait -->
+                <i class="fa-solid fa-info"></i>
+                <p class="section-subtitle">
+                    Plus de 500 logements sont disponibles dans cette ville
+                </p>
+            </div>
+
         </section>
 
-        <section class="hebergements-populaires">
-          <div class="section-title">
-            Les plus populaires
-          </div>
-          <div class="hebergements-cards">
-            <article class="hebergements-card">
-              <img src="" alt="">
-              <h2 class="card-title">
+        <div class="hebergements">
+            <section class="hebergements-general">
+                <h1 class="section-title" id="hebergements-marseille">
+                    Hebergements à Marseille
+                </h1>
+                <div class="hebergements-cards-row">
+                    <a href="#">
+                        <article class="hebergements-card">
+                            <img src="" alt="">
+                            <div class="hebergements-card-data">
+                                <h4 class="card-title">
+                                    Title
+                                </h4>
+                                <p class="card-text">
+                                    Nuit à partir de 50 <span class="euro">€</span>
+                                </p>
+                                <div class="hebergements-card-stars">
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star grey-icon"></i>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="hebergements-card">
+                            <img src="" alt="">
+                            <div class="hebergements-card-data">
+                                <h4 class="card-title">
+                                    Title
+                                </h4>
+                                <p class="card-text">
+                                    Nuit à partir de 50 <span class="euro">€</span>
+                                </p>
+                                <div class="hebergements-card-stars">
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star grey-icon"></i>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="hebergements-card">
+                            <img src="" alt="">
+                            <div class="hebergements-card-data">
+                                <h4 class="card-title">
+                                    Title
+                                </h4>
+                                <p class="card-text">
+                                    Nuit à partir de 50 <span class="euro">€</span>
+                                </p>
+                                <div class="hebergements-card-stars">
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star grey-icon"></i>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
 
-              </h2>
-              <p class="card-text">
+                </div>
+                <div class="hebergements-cards-row">
+                    <a href="#">
+                        <article class="hebergements-card">
+                            <img src="" alt="">
+                            <div class="hebergements-card-data">
+                                <h4 class="card-title">
+                                    Title
+                                </h4>
+                                <p class="card-text">
+                                    Nuit à partir de 50 <span class="euro">€</span>
+                                </p>
+                                <div class="hebergements-card-stars">
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star grey-icon"></i>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="hebergements-card">
+                            <img src="" alt="">
+                            <div class="hebergements-card-data">
+                                <h4 class="card-title">
+                                    Title
+                                </h4>
+                                <p class="card-text">
+                                    Nuit à partir de 50 <span class="euro">€</span>
+                                </p>
+                                <div class="hebergements-card-stars">
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star grey-icon"></i>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="#">
+                        <article class="hebergements-card">
+                            <img src="" alt="">
+                            <div class="hebergements-card-data">
+                                <h4 class="card-title">
+                                    Title
+                                </h4>
+                                <p class="card-text">
+                                    Nuit à partir de 50 <span class="euro">€</span>
+                                </p>
+                                <div class="hebergements-card-stars">
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star blue-icon"></i>
+                                    <i class="fa-solid fa-star grey-icon"></i>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+                <h2 class="medium-title">
+                    Afficher plus
+                </h2>
+            </section>
 
-              </p>
-              <div class="card-stars">
+            <section class="hebergements-populaires">
 
+              <div class="section-header">
+                <h1>
+                    Les plus populaires
+                </h1>
+                <div>
+                    <i class="fa-solid fa-chart-line blue-icon"></i>
+                </div>
               </div>
-            </article>
-            <!-- Je dupliquerai *3 seulement quand la carte sera parfaite -->
-          </div>
-        </section>
 
-        <section class="activites">
-          <div class="section-title">
+              <div class="populaires-cards">
+                <a href="#">
+                    <article class="populaires-card">
+                      <!-- <img src="" alt=""> -->
+                      <div class="populaires-card-img" style="">
 
-          </div>
+                      </div>
+                      <div class="populaires-card-data">
+                        <div class="populaires-card-data-text">
+                            <h4 class="card-title">
+                                Title
+                            </h4>
+                            <p class="card-text">
+                                Nuit à partir de 50 <span class="euro">€</span>
+                            </p>
+                        </div>
+                        <div class="populaires-card-stars">
+                            <i class="fa-solid fa-star blue-icon"></i>
+                            <i class="fa-solid fa-star blue-icon"></i>
+                            <i class="fa-solid fa-star blue-icon"></i>
+                            <i class="fa-solid fa-star blue-icon"></i>
+                            <i class="fa-solid fa-star grey-icon"></i>
+                        </div>
+                      </div>
+                    </article>
+                </a>
+                <a href="#">
+                    <article class="populaires-card">
+                        <div class="populaires-card-img" style="">
+
+                        </div>
+                      <div class="populaires-card-data">
+                        <div class="populaires-card-data-text">
+                            <h4 class="card-title">
+                                Title
+                            </h4>
+                            <p class="card-text">
+                                Nuit à partir de 50 <span class="euro">€</span>
+                            </p>
+                        </div>
+                        <div class="populaires-card-stars">
+                            <i class="fa-solid fa-star blue-icon"></i>
+                            <i class="fa-solid fa-star blue-icon"></i>
+                            <i class="fa-solid fa-star blue-icon"></i>
+                            <i class="fa-solid fa-star blue-icon"></i>
+                            <i class="fa-solid fa-star grey-icon"></i>
+                        </div>
+                      </div>
+                    </article>
+                </a>
+                <a href="#">
+                    <article class="populaires-card">
+                        <div class="populaires-card-img" style="">
+
+                        </div>
+                      <div class="populaires-card-data">
+                        <div class="populaires-card-data-text">
+                            <h4 class="card-title">
+                                Title
+                            </h4>
+                            <p class="card-text">
+                                Nuit à partir de 50 <span class="euro">€</span>
+                            </p>
+                        </div>
+                        <div class="populaires-card-stars">
+                            <i class="fa-solid fa-star blue-icon"></i>
+                            <i class="fa-solid fa-star blue-icon"></i>
+                            <i class="fa-solid fa-star blue-icon"></i>
+                            <i class="fa-solid fa-star blue-icon"></i>
+                            <i class="fa-solid fa-star grey-icon"></i>
+                        </div>
+                      </div>
+                    </article>
+                </a>
+                <!-- Je dupliquerai *3 seulement quand la carte sera parfaite -->
+              </div>
+            </section>
+        </div>
+
+        <section class="activites" >
+            <h1 class="section-title" id="activites">
+                Activités à Marseille
+            </h1>
           <div class="activites-cards">
-            <article class="activites-card">
+            <a href="#" class="activites-link-card">
+                <article class="activites-card">
+                    <div class="activites-card-img" style="">
 
-            </article>
-            <!-- Je dupliquerai *4 seulement quand la carte sera parfaite -->
+                    </div>
+                    <div class="activites-card-data">
+                        <h4 class="card-title">
+                            Vieux-Port
+                        </h4>
+                    </div>
+                </article>
+            </a>
+            <a href="#" class="activites-link-card">
+                <article class="activites-card">
+                    <div class="activites-card-img" style="">
+
+                    </div>
+                    <div class="activites-card-data">
+                        <h4 class="card-title">
+                            Vieux-Port
+                        </h4>
+                    </div>
+                </article>
+            </a>
+            <a href="#" class="activites-link-card">
+                <article class="activites-card">
+                    <div class="activites-card-img" style="">
+
+                    </div>
+                    <div class="activites-card-data">
+                        <h4 class="card-title">
+                            Vieux-Port
+                        </h4>
+                    </div>
+                </article>
+            </a>
+            <a href="#" class="activites-link-card">
+                <article class="activites-card">
+                    <div class="activites-card-img" style="">
+
+                    </div>
+                    <div class="activites-card-data">
+                        <h4 class="card-title">
+                            Vieux-Port
+                        </h4>
+                    </div>
+                </article>
+            </a>
           </div>
 
         </section>
       </main>
 
       <footer>
-        <div class="footer-nav">
-
-        </div>
-        <div class="footer-nav">
-
-        </div>
-        <div class="footer-nav">
-
-        </div>
+        <nav class="footer-nav">
+            <h2 class="medium-title">
+                A propos
+            </h2>
+            <p class="section-subtitle">
+                Fonctionnement du site
+            </p>
+            <p class="section-subtitle">
+                Conditions générales
+            </p>
+            <p class="section-subtitle">
+                Données et confidentialité
+            </p>
+        </nav>
+        <nav class="footer-nav">
+            <h2 class="medium-title">
+                Nos hébergements
+            </h2>
+            <p class="section-subtitle">
+                Charte qualité
+            </p>
+            <p class="section-subtitle">
+                Proposer votre hôtel
+            </p>
+        </nav>
+        </nav>
+        <nav class="footer-nav">
+            <h2 class="medium-title">
+                Assistance
+            </h2>
+            <p class="section-subtitle">
+                Centre d'aide
+            </p>
+            <p class="section-subtitle">
+                Nous contacter
+            </p>
+        </nav>
+        </nav>
       </footer>
     </div>
 </body>

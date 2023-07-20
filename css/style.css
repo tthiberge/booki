@@ -1,18 +1,358 @@
 /****** General ***********/
+body {
+  color: #000;
+  font-family: Raleway;
+  font-style: normal;
+  line-height: normal;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+h2 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+
+}
+
+
+.main-containeur {
+  display: flex;
+  padding: 0px 50px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 35px;
+  align-self: stretch;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  align-self: stretch;
+}
+
+/* Zone de recherche */
+
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 35px;
+  align-self: stretch;
+}
+
+.header {
+  display: flex;
+  height: 53px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
 
 
 
+.filterbar {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  gap: 15px;
+}
 
 
+/* .filter-items {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  gap: 15px;
+} */
+
+.filter-item {
+  display: flex;
+  height: 50px;
+  padding: 4px 19px;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 25px;
+  border: 2px solid var(--grey-tint-2, #D9D9D9);
+}
+
+.filter-item i {
+  color: #0065FC;
+}
 
 
+.infobar i {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: solid 1px #D9D9D9;
+}
 
 
+/* ------ Hebergements ------- */
+
+.hebergements {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  align-self: stretch;
+  /* Justify content? */
+}
+
+.hebergements-general {
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  flex: 1 0 0;
+  /* align-self: stretch; */
+  border-radius: 15px;
+  background: var(--grey, #F2F2F2);
+}
 
 
+.hebergements-cards-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  gap: 30px;
+  align-self: stretch;
+}
+
+.hebergements-card {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15px;
+  align-items: center;
+  gap: 4px;
+  flex: 1 0 0;
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+}
+
+.hebergements-card img {
+  height: 124px;
+  align-self: stretch;
+  border-radius: 20px 20px 0px 0px;
+  border: 5px solid var(--white, #FFF);
+  background: url('../images/hebergements/annie-spratt.jpg'), lightgray 50% / cover no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hebergements-card-data {
+  display: flex;
+  padding: 0px 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.hebergements-card-stars {
+  font-size: 14px;
+}
+
+.blue-icon {
+  color: #0065FC;
+}
+
+.grey-icon {
+  color: #F2F2F2;
+}
+
+.card-text {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.euro {
+  font-weight: 600;
+}
+
+.hebergements-populaires {
+  display: flex;
+  width: 429px;
+  padding: 30px;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  /* align-self: stretch; */
+  border-radius: 15px;
+  background: var(--grey, #F2F2F2);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.populaires-cards{
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  gap: 30px;
+  align-self: stretch;
+}
+
+.populaires-card {
+  display: flex;
+  height: 144px;
+  /* align-items: center; J'enlève parce que ça me fout le bazar vis à de mes padding généraux */
+  align-self: stretch;
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+  /* padding: 5px; */
+    /* Pour donner un effet margin, mais en fait non, solid border de 5px sur 3 côtés - pas utilisé, j'ai mis du padding à la card à la place */
+  border-top: 5px solid var(--white, #FFF);
+  border-bottom: 5px solid var(--white, #FFF);
+  border-left: 5px solid var(--white, #FFF);
+  overflow: hidden;
+}
+
+.populaires-card-img {
+  height: 100%;
+  width: 123px;
+  background: url('../images/hebergements/fred-kleber.jpg'), lightgray 50% / cover no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.populaires-card-data {
+  display: flex;
+  width: 246px;
+  height: 134px;
+  padding: 10px 0px 0px 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.populaires-card-data-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.populaires-card-stars {
+  font-size: 12px;
+  padding-bottom: 5px;
+}
+
+/* Activités */
+
+.activites {
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  align-self: stretch;
+}
+
+.activites-cards {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.activites-link-card{
+  width: 100%;
+}
+
+.activites-card {
+  display: flex;
+  height: 439px;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  border-radius: 20px;
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+  overflow: hidden;
+  align-self: stretch;
+  width: 100%;
+  /* background-color: blue; */
+}
+
+.activites-card-img {
+  width: 100%;
+  height: 380px;
+  /* align-self: stretch; */
+  background: url('../images/activites/florian-wehde.jpg'), lightgray 50% / cover no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.activites-card-data {
+  display: flex;
+  padding: 20px 19px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  width: 100%;
+}
 
 
+/* Footer */
+footer {
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+  background: var(--grey, #F2F2F2);
+}
 
+.footer-nav {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  flex-grow: 1;
+  align-self: stretch;
+}
 
 
 
