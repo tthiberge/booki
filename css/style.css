@@ -83,13 +83,13 @@ p {
   }
 
   .hebergements-cards-row a {
-    width: 243px !important;
-    max-width: 243px !important;
+    /* width: 243px !important;
+    max-width: 243px !important; */
   }
 
   .hebergements-card {
-    width: 243px !important;
-    max-width: 243px !important;
+    /* width: 243px !important;
+    max-width: 243px !important; */
   }
 
   .hebergements-populaires {
@@ -202,6 +202,11 @@ header > a {
   display: flex;
   gap: 68px;
   padding: 0px 50px;
+}
+
+.header-nav-item {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .header-nav-item-link {
@@ -477,13 +482,15 @@ main {
 
 .hebergements-card img {
   height: 124px;
-  /* width: 100%; */
+  width: 100%;
   /* align-self: stretch; */
   border-radius: 20px 20px 0px 0px;
   border: 5px solid var(--white, #FFF);
-  background: url('../images/hebergements/annie-spratt.jpg'), lightgray 50% / cover no-repeat;
+  /* background: url('../images/hebergements/annie-spratt.jpg'), lightgray 50% / cover no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center; */
+  object-fit: cover;
+  object-position: center;
 }
 
 .hebergements-card-data {
@@ -636,16 +643,19 @@ main {
   /* background-color: blue; */
 }
 
+.activites-card picture {
+  width: 100%;
+}
+
 .activites-card-img {
   width: 100%;
   height: 380px;
   max-height: 380px;
   overflow: hidden;
-  /* align-self: stretch; */
-  /* background: url('../images/activites/florian-wehde.jpg'), lightgray 50% / cover no-repeat;
-  background-size: cover;
-  background-position: top; */
+  object-fit: cover;
+  background-position: top;
 }
+
 
 .activites-card-data {
   height: 59px;
@@ -672,15 +682,21 @@ footer {
 }
 
 .footer-nav {
-  display: flex;
   padding: 20px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 15px;
   flex-grow: 1;
-  align-self: stretch;
 }
 
+.footer-nav ul {
+  padding: 0px;
+  margin: 0px;
+
+}
+.footer-li {
+  list-style-type: none;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 15px;
+}
 
 
 
