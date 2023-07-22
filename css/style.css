@@ -83,7 +83,12 @@ p {
   }
 
   .hebergements-cards-row a {
-    width: 243px !important;
+    width: 300px !important;
+    max-width: 300px !important;
+  }
+
+  .hebergements-cards-wrap a {
+    width: 100% !important;
     max-width: 243px !important;
   }
 
@@ -459,6 +464,19 @@ main {
   justify-content: space-between;
   gap: 30px;
   width: 100%
+}
+
+.hebergements-cards-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%
+}
+
+.hebergements-cards-wrap a {
+  width: 243px !important;
+  max-width: 243px !important;
 }
 
 .hebergements-card {
