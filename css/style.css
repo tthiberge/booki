@@ -4,6 +4,8 @@ body {
   font-family: Raleway;
   font-style: normal;
   line-height: normal;
+  padding: 0px;
+  margin: 0px;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -47,15 +49,134 @@ p {
 
 }
 
+/* MEDIA QUERIES LARGE SCREEN */
+@media screen and (min-width: 1440px) {
+  .large-container{
+    max-width: 1440px;
+    margin: auto;
+  }
+}
 
-.large-containeur {}
+/* MEDIA QUERIES TABLETTE */
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+
+  .hebergements {
+    flex-direction: column !important;
+    align-items: start !important;
+    width: 100% !important;
+
+  }
+
+  .hebergements-general {
+    width: 100%;
+    max-width: 100% !important;
+    /* background-color: yellow; */
+    /* On l'avait pas ce box-sizing mais super utile pour inclure le padding et la margin dans la width totale allowed */
+    box-sizing: border-box !important;
+  }
+
+  .hebergements-cards-row a {
+    width: 243px !important;
+    max-width: 243px !important;
+  }
+
+  .hebergements-card {
+    width: 243px !important;
+    max-width: 243px !important;
+  }
+
+  .hebergements-populaires {
+    width: 100% !important;
+    /* On l'avait pas ce box-sizing mais super utile pour inclure le padding et la margin dans la width totale allowed */
+    box-sizing: border-box !important;
+
+  }
+
+  .populaires-cards {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    gap: 20px !important;
+  }
+
+  .populaires-cards a {
+    display: flex !important;
+    height: 146px !important;
+    width: 275px !important;
+  }
+
+  .populaires-card-img {
+    height: 146px !important;
+    width: 92px !important;
+  }
+
+  .filterbar {
+    flex-direction: column !important;
+    align-items: start !important;
+    gap: 20px !important;
+    height: 100% !important;
+  }
+
+  .activites-cards a {
+    height: 270px !important;
+  }
+
+  .activites-card-img {
+    height: 200px !important;
+    max-height: 200px !important ;
+    background-position: bottom !important;
+  }
+
+  .activites-card-data {
+    height: 70px !important;
+  }
+}
+
+/* MEDIA QUERIES MOBILE */
+@media screen and (min-width: 375px) and (max-width: 1024px) {
+
+  .search-submit i {
+    display: flex !important;
+  }
+
+  .search-submit input {
+    display: none !important;
+  }
+
+  .filterbar {
+    flex-direction: column !important;
+    align-items: start !important;
+    /* justify-content: center; */
+    gap: 20px !important;
+    height: 100% !important;
+  }
+
+    .filter-items {
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      height: 100% !important;
+    }
+
+    .filter-item {
+      width: 135px !important;
+
+    }
+
+}
+
 
 /* HEADER */
 
 header {
-  display: flex;
-justify-content: space-between;
-/* align-items: center; */
+  display: flex !important;
+  /* gap: 950px; */
+  align-self: stretch;
+  margin-bottom: 30px;
+}
+
+/* Comme c'est cliquable, j'ai un a qui entoure, donc c'est sur le a qui fallait mettre mon flex-grow, mais sur le logo ! Compris */
+header > a {
+  flex-grow: 1;
 }
 
 .logo {
@@ -64,45 +185,49 @@ justify-content: space-between;
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
-
 }
 
 .logo img {
   width: 61.09px;
-height: 19px;
+  height: 19px;
 }
 
 .header-nav {
   display: flex;
   gap: 68px;
-  padding-right: 35px;
+  padding: 0px 50px;
 }
 
-.header-nav-item {
+.header-nav-item-link {
   padding-block: 20px;
+  color: black;
+}
+
+.header-nav-item-link:hover {
+  border-top: #0065FC solid 2px;
+  color: #0065FC;
 }
 
 
 
-
-
-
-
-
-.main-containeur {
+.main-container {
   display: flex;
   padding: 0px 50px;
   flex-direction: column;
   align-items: flex-start;
   gap: 35px;
-  align-self: stretch;
+  /* Permet qu'en rétrecissant ça ne décale pas ma navbar alors que ma width est fixe  */
+  overflow: hidden;
+  /* border: red 1px solid; */
 }
+
 
 main {
   display: flex;
   flex-direction: column;
   gap: 35px;
-  align-self: stretch;
+  width: 100%;
+  /* align-self: stretch; */
 }
 
 /* Zone de recherche */
@@ -126,13 +251,15 @@ main {
 
 .form {
   display: flex;
-  width: 377px;
+  /* width: 377px; */
   height: 49px;
   align-items: center;
   gap: 24px;
   border-radius: 15px;
-  border: 1px solid var(--grey, #F2F2F2);
+  /* border: 1px solid var(--grey, #F2F2F2); */
   background: var(--white, #FFF);
+  border: 1px solid #F2F2F2;
+  border-radius: 15px;
 }
 
 .search-pin {
@@ -146,24 +273,54 @@ main {
   border-radius: 15px 0px 0px 15px;
 }
 
+
 .search-field input[type="text"] {
   width: 100%;
   border: transparent;
   /* Je n'arrive pas à mettre une couleur de police noire  */
 }
 
-/* Utilisation du pseudo-element pour cibler le placeholder */
+#site-search {
+  text-align: start;
+  width: 100%;
+  width: 150px;
+}
+
 #site-search::placeholder {
   color: black;
 }
-
-
-
 
 #site-search:focus {
   /* background-color: green; */
   outline: none;
 }
+
+/* Utilisation du pseudo-element pour cibler le placeholder */
+
+#site-search:focus::placeholder{
+  color: white;
+}
+
+.search-submit {
+  display: flex;
+  align-items: center
+}
+
+
+.search-submit i {
+  display: flex;
+  height: 19px;
+  padding: 15px 16px;
+  align-items: center;
+  gap: 10px;
+  background-color: #0065FC;
+  color: white;
+  border-radius: 0px 15px 15px 0px;
+  border: transparent;
+  display: none;
+}
+
+
 
 .search-submit input {
   display: flex;
@@ -193,7 +350,7 @@ main {
 
 
 
-
+/* FILTER BAR */
 
 .filterbar {
   display: flex;
@@ -203,12 +360,13 @@ main {
 }
 
 
-/* .filter-items {
+.filter-items {
   display: flex;
   height: 50px;
   align-items: center;
   gap: 15px;
-} */
+}
+
 
 .filter-item {
   display: flex;
@@ -217,15 +375,14 @@ main {
   padding: 0px 19px;
   align-items: center;
   gap: 10px;
+  background-color: white;
   /* Je mets border-radius 50px pour que ce soit plus arrondi au lieu de 35px du figma */
   border-radius: 50px;
   border: 2px solid var(--grey-tint-2, #D9D9D9);
 }
 
 .filter-item:hover {
-  background-color: #0065FC;
-  opacity: 0.7;
-  color: white;
+  background-color: #DEEBFF;
   transition-duration: 300ms;
   cursor: pointer;
 
@@ -236,7 +393,6 @@ main {
 }
 
 .filter-item:hover i {
-  color: white;
   transition-duration: 300ms;
 }
 
@@ -266,9 +422,12 @@ main {
   display: flex;
   align-items: center;
   gap: 40px;
-  align-self: stretch;
+  /* align-self: stretch; */
   /* Justify content? */
+  width: 100%;
 }
+
+
 
 .hebergements-general {
   display: flex;
@@ -276,8 +435,9 @@ main {
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
-  flex: 1 0 0;
-  /* align-self: stretch; */
+  flex-grow: 1;
+  /* width: 100%; */
+  max-width: 100%;
   border-radius: 15px;
   background: var(--grey, #F2F2F2);
 }
@@ -286,32 +446,27 @@ main {
 .hebergements-cards-row {
   display: flex;
   justify-content: space-between;
-  /* align-items: flex-start; */
   gap: 30px;
   width: 100%
-  /* align-self: stretch; */
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
-  gap: 30px;
-  align-self: stretch; */
 }
 
 .hebergements-card {
   display: flex;
   flex-direction: column;
+  /* width: 243px; */
+  /* max-width: 243px; */
+
   padding-bottom: 15px;
   gap: 4px;
   border-radius: 20px;
   background: #FFF;
   box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
-  /* align-items: center; */
   flex-grow: 1;
-  background-color: red;
 }
 
 .hebergements-card img {
   height: 124px;
-  width: auto;
+  /* width: 100%; */
   /* align-self: stretch; */
   border-radius: 20px 20px 0px 0px;
   border: 5px solid var(--white, #FFF);
@@ -350,15 +505,17 @@ main {
 
 .hebergements-populaires {
   display: flex;
-  width: 429px;
-  padding: 30px;
   flex-direction: column;
+  /* J'enlève la width fixe, car j'ai plutôt fixé à quoi ressemble une card, cf design system */
+  /* width: 429px; */
+  padding: 30px;
   align-items: center;
   gap: 30px;
   /* align-self: stretch; */
   border-radius: 15px;
   background: var(--grey, #F2F2F2);
 }
+
 
 .section-header {
   display: flex;
@@ -375,10 +532,12 @@ main {
   align-self: stretch;
 }
 
+
 .populaires-card {
   display: flex;
-  height: 144px;
-  /* align-items: center; J'enlève parce que ça me fout le bazar vis à de mes padding généraux */
+  height: 146px;
+  width: 369px;
+
   align-self: stretch;
   border-radius: 20px;
   background: #FFF;
@@ -392,11 +551,8 @@ main {
 }
 
 .populaires-card-img {
-  height: 100%;
+  height: 146px;
   width: 123px;
-  /* background: url('../images/hebergements/fred-kleber.jpg'), lightgray 50% / cover no-repeat; */
-  /* background-size: cover;
-  background-position: center; */
 }
 
 .populaires-card-data {
@@ -446,9 +602,13 @@ main {
   width: 100%;
 }
 
+.activites-cards a {
+  height: 439px;
+}
+
 .activites-card {
   display: flex;
-  height: 439px;
+  /* height: 439px; */
   flex-direction: column;
   align-items: center;
   flex-grow: 1;
@@ -462,7 +622,7 @@ main {
 
 .activites-card-img {
   width: 100%;
-  height: 360px;
+  height: 380px;
   max-height: 380px;
   overflow: hidden;
   /* align-self: stretch; */
@@ -472,6 +632,7 @@ main {
 }
 
 .activites-card-data {
+  height: 59px;
   display: flex;
   padding: 20px 19px;
   justify-content: flex-start;
@@ -481,13 +642,13 @@ main {
 }
 
 .card-title {
-  width: 100%;
+  /* width: 100%; */
 }
 
 
 /* Footer */
 footer {
-  display: flex;
+  display: flex !important;
   align-items: flex-start;
   align-self: stretch;
   background: var(--grey, #F2F2F2);
