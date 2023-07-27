@@ -30,7 +30,6 @@ h2 {
   font-weight: 700;
 }
 
-
 .search-field input,
 .search-submit input {
   text-align: center;
@@ -54,16 +53,9 @@ p {
 
 }
 
-
-
-
-
 /* HEADER */
-
 header {
   display: flex !important;
-  /* gap: 950px; */
-  /* align-self: stretch; */
   margin-bottom: 30px;
 }
 
@@ -116,7 +108,6 @@ header > a {
   gap: 35px;
   /* Permet qu'en rétrecissant ça ne décale pas ma navbar alors que ma width est fixe  */
   overflow: hidden;
-  /* border: red 1px solid; */
 }
 
 
@@ -125,11 +116,9 @@ main {
   flex-direction: column;
   gap: 35px;
   width: 100%;
-  /* align-self: stretch; */
 }
 
 /* Zone de recherche */
-
 .search {
   display: flex;
   flex-direction: column;
@@ -153,12 +142,10 @@ main {
 
 .form {
   display: flex;
-  /* width: 377px; */
   height: 49px;
   align-items: center;
   gap: 24px;
   border-radius: 15px;
-  /* border: 1px solid var(--grey, #F2F2F2); */
   background: var(--white, #FFF);
   border: 1px solid #F2F2F2;
   border-radius: 15px;
@@ -179,7 +166,6 @@ main {
 .search-field input[type="text"] {
   width: 100%;
   border: transparent;
-  /* Je n'arrive pas à mettre une couleur de police noire  */
 }
 
 #site-search {
@@ -198,7 +184,6 @@ main {
 }
 
 /* Utilisation du pseudo-element pour cibler le placeholder */
-
 #site-search:focus::placeholder{
   color: white;
 }
@@ -207,7 +192,6 @@ main {
   display: flex;
   align-items: center
 }
-
 
 .search-submit i {
   display: flex;
@@ -223,8 +207,6 @@ main {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
 }
-
-
 
 .search-submit input {
   display: flex;
@@ -249,13 +231,7 @@ main {
 }
 
 
-
-
-
-
-
 /* FILTER BAR */
-
 .filterbar {
   display: flex;
   height: 50px;
@@ -263,14 +239,12 @@ main {
   gap: 15px;
 }
 
-
 .filter-items {
   display: flex;
   height: 50px;
   align-items: center;
   gap: 15px;
 }
-
 
 .filter-item {
   display: flex;
@@ -326,13 +300,10 @@ main {
 
 
 /* ------ Hebergements ------- */
-
 .hebergements {
   display: flex;
   align-items: flex-start;
   gap: 40px;
-  /* align-self: stretch; */
-  /* Justify content? */
   width: 100%;
 }
 
@@ -345,7 +316,6 @@ main {
   align-items: flex-start;
   gap: 30px;
   flex-grow: 1;
-  /* width: 100%; */
   max-width: 100%;
   border-radius: 15px;
   background: var(--grey, #F2F2F2);
@@ -362,8 +332,6 @@ main {
 .hebergements-card {
   display: flex;
   flex-direction: column;
-  /* width: 243px; */
-  /* max-width: 243px; */
 
   padding-bottom: 15px;
   gap: 4px;
@@ -376,7 +344,6 @@ main {
 .hebergements-card img {
   height: 124px;
   width: 100%;
-  /* align-self: stretch; */
   border-radius: 20px 20px 0px 0px;
   border: 5px solid var(--white, #FFF);
   /* background: url('../images/hebergements/annie-spratt.jpg'), lightgray 50% / cover no-repeat;
@@ -428,7 +395,6 @@ main {
   padding: 30px;
   align-items: center;
   gap: 30px;
-  /* align-self: stretch; */
   border-radius: 15px;
   background: var(--grey, #F2F2F2);
 }
@@ -444,7 +410,6 @@ main {
 .populaires-cards{
   display: flex;
   flex-direction: column;
-  /* align-items: flex-start; */
   gap: 30px;
   align-self: stretch;
 }
@@ -499,7 +464,6 @@ main {
 }
 
 /* Activités */
-
 .activites {
   display: flex;
   padding: 30px;
@@ -527,7 +491,6 @@ main {
 
 .activites-card {
   display: flex;
-  /* height: 439px; */
   flex-direction: column;
   align-items: center;
   flex-grow: 1;
@@ -536,7 +499,6 @@ main {
   overflow: hidden;
   align-self: stretch;
   width: 100%;
-  /* background-color: blue; */
 }
 
 .activites-card picture {
@@ -564,15 +526,8 @@ main {
   align-self: stretch;
 }
 
-.card-title {
-  /* width: 100%; */
-}
-
 
 /* Footer */
-
-
-
 footer {
   display: flex !important;
   align-items: flex-start;
@@ -596,24 +551,3 @@ footer {
   font-weight: 400;
   margin-top: 15px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Le code ci-dessous correspond à la version responsive uniquement */
-
-/****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
