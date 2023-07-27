@@ -491,6 +491,7 @@ main {
   background-position: center; */
   object-fit: cover;
   object-position: center;
+  box-sizing: border-box;
 }
 
 .hebergements-card-data {
