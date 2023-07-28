@@ -35,7 +35,7 @@
     flex-grow: 1;
   }
 
-  .header-nav-item-link:hover {
+  .header-nav-item-link.first {
     border-bottom: #0065FC solid 2px;
     border-top: transparent;
     color: #0065FC;
