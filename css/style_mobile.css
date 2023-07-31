@@ -41,6 +41,11 @@
     color: #0065FC;
   }
 
+  .header-nav-item-link:hover {
+    border-top: transparent solid 0px;
+    color: black;
+  }
+
   .search {
     padding: 0 20px;
     box-sizing: border-box;
