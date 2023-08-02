@@ -343,7 +343,7 @@ main {
 }
 
 .hebergements-card img {
-  height: 124px;
+  height: 130px;
   width: 100%;
   border-radius: 20px 20px 0px 0px;
   border: 5px solid var(--white, #FFF);
